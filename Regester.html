@@ -1,0 +1,88 @@
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(#6e8efb, #a777e3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .register-container {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #17a2b8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #138496;
+        }
+        .back {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .back a {
+            text-decoration: none;
+            color: #28a745;
+        }
+        .back a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="Phone number" id="Phone-number" placeholder="Phone number">
+        <input type="password" id="password" placeholder="Password">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+        <button onclick="register()">Sign Up</button>
+        <div class="back">
+            <a href="login page.html">Back to Login</a>
+        </div>
+    </div>
+
+    <script>
+        function register() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("Phone-number").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (name === "" || email === "" || password === "" || confirmPassword === "") {
+                alert("Please fill all fields");
+            } else if (password !== confirmPassword) {
+                alert("Passwords do not match");
+            } else {
+                alert("Registration Successful (demo only)");
+                 href = "login page.html"; 
+            }
+        }
+    </script>
+</body>
+</html>
